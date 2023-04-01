@@ -6,9 +6,9 @@
 		<title>우리의 1주년 축하♥</title>
 		<script src="dist/typeit.min.js"></script>
 		<style>
-			html, body, p { padding: 0; margin: 0; }
+			html, body, p { padding: 0; margin: 0; width: 100%; height: 100%; }
 			.bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #b3dff8 url(ryan.png) no-repeat bottom center; background-size: 230px auto; }
-			.text_box { padding: 30px; height: 370px; overflow-y: scroll; -webkit-box-sizing: border-box; box-sizing: border-box; }
+			.text_box { padding: 30px; height: 70%; max-height: 70%; overflow-y: scroll; -webkit-box-sizing: border-box; box-sizing: border-box; }
 			.text { letter-spacing: -1px; font-size: 14px; line-height: 1.4; }
 		</style>
 	</head>
@@ -19,10 +19,6 @@
       	</div>
 
       	<script>
-      		var textBoxH = window.screen.height-200
-      			textBox = document.querySelector(".text_box")
-      			textBox.style.height = textBoxH+"px"
-
       		new TypeIt('.text', {
 		        speed: 200,
 		        strings: [
@@ -36,17 +32,17 @@
 		        	'길가는 동안 내가 지치지 않게',
 		        	'그대의 꽃향기 잃지 않으면 고맙겠다.',
 		        	'<동행, 이수동>',
-		        	'365일. 1주년.', 
+		        	'365일. 1년.',
 					'우리가 처음 만난 순간부터 지금까지의 장면들이 아직도 생생한데',
 					'짧지만 강렬?했던 그 시간들도 찰나같이 빠르게 지나간것 같아.',
-					'매번 서로를 이해해주지 못해 모진말로 아프게하고',
-					'그로인해 스스로를 자책하고 다시는 그러지말자고 다짐하면서도',
-					'언제 그랬냐는듯 또 다시 어리석은 그 순간을 반복하게 되더라',
-					'어느새 자연스럽게 스며들어 즐겁고 행복한 시간의 조각들을 많이 만들게 되서 너무나 감사하고',
+					'지나온 시간동안 더할나위 없이 즐겁고 행복한 시간들도 있었지만',
+					'매번 서로를 이해해주지 못해 모진말로 아프게하는 아쉬운 순간들도 있었던거 같아',
+					'그럼에도 그런 시간들이 있었기에 우리가 지금까지 올수 있었다고 생각해.',
 					'앞으로도 우리 꽃 같은 설아와 나무 같은 내가 더 많은 시간들을 만들어 나갈꺼라 생각하니 기대가 돼.',
-					'늘 자기에게 좋은 것들 해주지 못해 미안하고 부족한 나지만',
-					'그럼에도 불구하고 염치 없이 앞으로 가야하는 길도 같이 함께했으면 좋겠어.',
-					'소소하지만 앞으로도 잘 부탁하고 사랑하오♥',
+					'물론 늘 자기에게 부족하고 좋은 것들 해주지 못해 미안한 나지만',
+					'그럼에도 불구하고 앞으로 걸어 나아가야할 길도 함께했으면 좋겠어.',
+					'소소하지만 앞으로도 잘 부탁하고 나와 결혼해주어 너무 고맙고 사랑하오♥',
+					'당신에게 늘 좋은 것만 주고 싶은 부족한 내가.',
 		        ],
 		        breakLines: true
 		      }).go();
