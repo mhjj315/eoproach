@@ -12,13 +12,27 @@
 				url(font/SpoqaHanSansNeo-Regular.woff2) format("woff2"); }
 
 			html, body, p { padding: 0; margin: 0; width: 100%; height: 100%; }
-			.bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #b3dff8 url(ryan.png) no-repeat bottom center; background-size: 230px auto; }
+			.bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #fff; }
+			.ryan { z-index: 1; position: fixed; bottom: 0px; left: 50%; width: 235px; height: 215px; margin-left: -115px; background: url(ryan.png) no-repeat top center; background-size: 390px auto; }
+			.ryan.on { animation: ryan .5s 1s forwards ease; }
+			@keyframes ryan {
+				0% { opacity: 1; }
+				100% { opacity: 0; }
+			}
+			.ryan2 { opacity: 0; position: fixed; bottom: 0; left: 50%; width: 230px; height: 200px; margin-left: -115px; background: url(ryan2.png) no-repeat top center; background-size: 100% auto; }
+			.ryan2.on { animation: ryan2 1s 1s forwards ease; }
+			@keyframes ryan2 {
+				0% { opacity: 0; }
+				100% { opacity: 1; }
+			}
 			.text_box { padding: 30px; height: 70%; max-height: 70%; overflow-y: scroll; -webkit-box-sizing: border-box; box-sizing: border-box; }
 			.text { letter-spacing: -1px; font-size: 15px; line-height: 1.4; font-family: 'SpoqaHanSansNeo'; }
 		</style>
 	</head>
 	<body>
 		<div class="bg"></div>
+		<div id="ryan" class="ryan"></div>
+		<div id="ryan2" class="ryan2"></div>
 		<div class="text_box">
       		<p class="text"></p>
       	</div>
@@ -50,8 +64,14 @@
 					'소소하지만 앞으로도 잘 부탁하고 나와 결혼해주어 너무 고맙고 사랑하오♥',
 					'당신에게 늘 좋은 것만 주고 싶은 부족한 내가.',
 		        ],
-		        breakLines: true
+		        breakLines: true,
 		      }).go();
+
+			  	setTimeout(function() {
+					document.getElementById("ryan").classList.add("on");
+					document.getElementById("ryan2").classList.add("on");
+				}, 130000);
+			  	
       	</script>
 	</body>
 </html>
